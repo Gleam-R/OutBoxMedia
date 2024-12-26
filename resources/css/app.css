@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fafc;
+    color: #2d3748;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 16rem;
+    background-color: #ff4d00;
+    color: white;
+    padding: 1.25rem;
+    z-index: 50; /* Ensure the sidebar stays behind the hamburger */
+    transform: translateX(-100%); /* Hide the sidebar by default */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#sidebar.open {
+    transform: translateX(0); /* Show sidebar when open */
+}
+
+#hamburger {
+    position: sticky;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100; /* Ensure it stays above the sidebar */
+    cursor: pointer;
+}
+
+#hamburger span {
+    display: block;
+    height: 2px;
+    background-color: rgb(252, 165, 15);
+    margin-bottom: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* Main Content Area */
+.flex-1 {
+    margin-left: 16rem; /* Reserve space for sidebar on large screens */
+    transition: margin-left 0.3s ease;
+}
+
+.flex-1.sidebar-hidden {
+    margin-left: 0; /* Full width when sidebar is hidden */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #sidebar {
+        transform: translateX(-100%); /* Hide sidebar by default */
+    }
+    .flex-1 {
+        margin-left: 0; /* Full width on small screens */
+    }
+}
