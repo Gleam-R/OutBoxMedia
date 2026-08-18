@@ -1,66 +1,543 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Absolutely. Since this is one of your **older Laravel projects that isn't deployed**, I'd make the README present it as a proper **full-stack web development project** while being transparent that it runs locally.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+I’d also remove the placeholder tables and replace them with actual Markdown image placeholders that you can easily fill later.
 
-## About Laravel
+````markdown
+# Out-Box-Media
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Out-Box-Media** is a web-based **news and article management system** built using **Laravel and MySQL**. The application provides a platform for publishing and managing news articles across different categories while allowing registered users to interact with content through comments and ratings.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The project was developed as a learning project to explore **Laravel web development, database management, authentication, role-based access control, CRUD operations, and user activity tracking**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+> 📌 **Project Status:** Local Development / Educational Project  
+> The application is currently designed to run in a local environment and has not been deployed publicly.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Project Overview
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Out-Box-Media provides different levels of access depending on the user's role.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The system supports three main actors:
 
-## Laravel Sponsors
+```text
+                    Out-Box-Media
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+        Admin         Registered       Guest
+                        User
+          │              │              │
+     Manage Content   Comment       Read News
+     Manage Users     Rate News     Login/Register
+     View Logs        Dashboard
+````
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+The project demonstrates how a Laravel application can handle content management, authentication, user interaction, and database operations within a single web application.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 👥 User Roles & Permissions
 
-## Contributing
+### 🔐 Admin
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+The Admin has full access to the management features of the system.
 
-## Code of Conduct
+#### News Management
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Create news articles
+* Edit existing articles
+* Delete articles
+* Assign articles to categories
+* Upload article images
 
-## Security Vulnerabilities
+#### Category Management
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Create categories
+* Edit categories
+* Delete categories
+* Organize news based on categories
 
-## License
+Example categories include:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Anime
+* Politics
+* Horror
+* Games
+
+#### User Management
+
+* View registered users
+* Add new users
+* Edit user information
+* Delete users
+* Assign user roles
+
+#### Activity Logs
+
+Administrators can monitor user activities within the system.
+
+Activity logs include information such as:
+
+* User activity
+* Action performed
+* Timestamp
+
+Admins can also delete activity log entries.
+
+---
+
+### 👤 Registered User
+
+Registered users can interact with published news content.
+
+Features include:
+
+* Browse available news
+* Read complete articles
+* Leave comments
+* Rate articles
+* Access a personalized dashboard
+
+Users can provide article ratings using a numerical scale, such as:
+
+```text
+1 — Poor
+2 — Below Average
+3 — Average
+4 — Good
+5 — Excellent
+```
+
+---
+
+### 🌐 Guest
+
+Guests are unauthenticated visitors who can access the public portion of the application.
+
+Guests can:
+
+* Browse published news
+* View article details
+* Browse news categories
+* Access the Login page
+* Access the Register page
+
+Guests cannot perform authenticated actions such as commenting or rating articles.
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+* **Laravel**
+* **PHP**
+* **MySQL**
+
+### Frontend
+
+* **HTML**
+* **CSS**
+* **JavaScript**
+* Laravel Blade
+
+### Development Environment
+
+* **Composer**
+* **XAMPP / MySQL**
+* Laravel Artisan
+* Localhost
+
+---
+
+## ✨ Features
+
+### 📰 News Management
+
+Administrators can manage the entire news collection through a dedicated management interface.
+
+* Create articles
+* Edit articles
+* Delete articles
+* Upload images
+* Assign categories
+* View publication information
+
+### 🗂️ Category Management
+
+News can be organized into different categories.
+
+Administrators can:
+
+* Add categories
+* Edit categories
+* Delete categories
+* Assign categories to news articles
+
+### 👥 User Management
+
+The system provides administrative tools for managing registered users.
+
+Administrators can:
+
+* View users
+* Create users
+* Edit users
+* Delete users
+* Manage user roles
+
+### 💬 Comments
+
+Authenticated users can leave comments on news articles and participate in discussions.
+
+### ⭐ Article Ratings
+
+Users can provide ratings for articles using a numerical rating system.
+
+### 📊 Activity Logging
+
+The application records user activities and provides administrators with an activity log for monitoring system usage.
+
+### 🔑 Authentication
+
+The system provides authentication functionality for registered users and administrators.
+
+---
+
+## 📸 Project Gallery
+
+The following screenshots demonstrate the different interfaces and features of Out-Box-Media.
+
+> Replace the image paths below with your actual screenshots.
+
+### 🌐 Public Interface
+
+#### Guest News List
+
+The main news page available to visitors.
+
+![Guest News List](screenshots/guest-news-list.png)
+
+---
+
+#### Article Detail
+
+The full article page where visitors can read published news.
+
+![Article Detail](screenshots/article-detail.png)
+
+---
+
+### 👤 User Interface
+
+#### User Dashboard
+
+The dashboard available to authenticated users.
+
+![User Dashboard](screenshots/user-dashboard.png)
+
+---
+
+#### Comments & Ratings
+
+Registered users can interact with articles through comments and ratings.
+
+![Comments and Ratings](screenshots/comments-ratings.png)
+
+---
+
+### 🔐 Administrative Interface
+
+#### Admin News Management
+
+Administrators can view and manage published news articles.
+
+![Admin News Management](screenshots/admin-news-management.png)
+
+---
+
+#### Create News
+
+The form used by administrators to create a new article.
+
+![Create News](screenshots/create-news.png)
+
+---
+
+#### Edit News
+
+The interface for modifying existing news articles.
+
+![Edit News](screenshots/edit-news.png)
+
+---
+
+#### Category Management
+
+Administrators can manage news categories.
+
+![Category Management](screenshots/category-management.png)
+
+---
+
+#### Add Category
+
+The form for creating a new news category.
+
+![Add Category](screenshots/add-category.png)
+
+---
+
+#### User Management
+
+The admin interface for viewing and managing registered users.
+
+![User Management](screenshots/user-management.png)
+
+---
+
+#### Add / Edit User
+
+Administrative forms for creating and modifying user accounts.
+
+![User Form](screenshots/user-form.png)
+
+---
+
+#### Activity Logs
+
+The activity log provides an overview of actions performed within the application.
+
+![Activity Logs](screenshots/activity-logs.png)
+
+---
+
+## 📂 Project Structure
+
+A typical Laravel project structure is organized as follows:
+
+```text
+Out-Box-Media/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   └── Middleware/
+│   └── Models/
+│
+├── database/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│   └── ...
+│
+├── resources/
+│   ├── views/
+│   ├── css/
+│   └── js/
+│
+├── routes/
+│   └── web.php
+│
+├── storage/
+│   └── ...
+│
+├── .env.example
+├── artisan
+├── composer.json
+└── README.md
+```
+
+---
+
+# 🚀 Local Installation
+
+## Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+* PHP
+* Composer
+* MySQL
+* Laravel-compatible PHP extensions
+* XAMPP or another local PHP/MySQL environment
+
+---
+
+## 1. Clone the Repository
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate into the project:
+
+```bash
+cd Out-Box-Media
+```
+
+---
+
+## 2. Install Dependencies
+
+Install the Laravel dependencies:
+
+```bash
+composer install
+```
+
+---
+
+## 3. Configure Environment
+
+Create a `.env` file from the example:
+
+```bash
+cp .env.example .env
+```
+
+On Windows, you can also simply copy `.env.example` and rename the copy to:
+
+```text
+.env
+```
+
+---
+
+## 4. Generate Application Key
+
+Run:
+
+```bash
+php artisan key:generate
+```
+
+---
+
+## 5. Configure MySQL
+
+Create a MySQL database for the application.
+
+Then update the database configuration in `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=out_box_media
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Adjust the username and password according to your local MySQL configuration.
+
+---
+
+## 6. Run Database Migrations
+
+Run the migrations:
+
+```bash
+php artisan migrate
+```
+
+If the project includes seeders, you can run:
+
+```bash
+php artisan migrate --seed
+```
+
+---
+
+## 7. Create Storage Link
+
+If the application uses Laravel's public storage system for uploaded images, run:
+
+```bash
+php artisan storage:link
+```
+
+---
+
+## 8. Start the Laravel Server
+
+Run:
+
+```bash
+php artisan serve
+```
+
+The application should then be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+# 🧪 Development Notes
+
+This project was developed primarily for **learning and academic purposes**.
+
+It demonstrates several important concepts in Laravel development, including:
+
+* MVC architecture
+* CRUD operations
+* Eloquent ORM
+* Database relationships
+* Authentication
+* Authorization
+* Role-based access
+* Form handling
+* File uploads
+* Blade templating
+* Database migrations
+* Seeders
+* Activity logging
+
+---
+
+# 🔮 Future Improvements
+
+Potential improvements for the project include:
+
+* Deploy the application to a production environment
+* Improve the responsive design
+* Add article search functionality
+* Add pagination
+* Add richer article editing capabilities
+* Improve image management
+* Add email notifications
+* Add more detailed analytics for administrators
+* Implement stronger authentication and authorization
+* Improve activity log filtering
+* Add automated testing
+
+---
+
+# 📌 Project Status
+
+**Local Development / Educational Project**
+
+The current version is functional as a local Laravel application but has not been deployed publicly.
+
+The project serves as a demonstration of building a **role-based news management system using Laravel and MySQL**.
+
+---
+
+## 👨‍💻 Author
+
+**Muhammad Rizky**
+
+Computer Science Student
+Universitas Mercu Buana
+
+---
+
+## 📚 Project Focus
+
+**Laravel · PHP · MySQL · MVC · CRUD · Authentication · Role-Based Access Control · Eloquent ORM · Blade**
