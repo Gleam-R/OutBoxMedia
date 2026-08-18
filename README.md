@@ -1,8 +1,3 @@
-Absolutely. Since this is one of your **older Laravel projects that isn't deployed**, I'd make the README present it as a proper **full-stack web development project** while being transparent that it runs locally.
-
-I’d also remove the placeholder tables and replace them with actual Markdown image placeholders that you can easily fill later.
-
-````markdown
 # Out-Box-Media
 
 **Out-Box-Media** is a web-based **news and article management system** built using **Laravel and MySQL**. The application provides a platform for publishing and managing news articles across different categories while allowing registered users to interact with content through comments and ratings.
