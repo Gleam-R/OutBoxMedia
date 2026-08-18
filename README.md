@@ -212,7 +212,7 @@ The following screenshots demonstrate the different interfaces and features of O
 
 The main news page available to visitors.
 
-![Guest News List](screenshots/guest-news-list.png)
+![Guest News List](screenshots/guest-news-list.jpeg)
 
 ---
 
@@ -220,7 +220,7 @@ The main news page available to visitors.
 
 The full article page where visitors can read published news.
 
-![Article Detail](screenshots/article-detail.png)
+![Article Detail](screenshots/article-detail.jpeg)
 
 ---
 
@@ -230,7 +230,7 @@ The full article page where visitors can read published news.
 
 The dashboard available to authenticated users.
 
-![User Dashboard](screenshots/user-dashboard.png)
+![User Dashboard](screenshots/user-dashboard.jpeg)
 
 ---
 
@@ -238,7 +238,7 @@ The dashboard available to authenticated users.
 
 Registered users can interact with articles through comments and ratings.
 
-![Comments and Ratings](screenshots/comments-ratings.png)
+![Comments and Ratings](screenshots/comments-ratings.jpeg)
 
 ---
 
@@ -248,7 +248,7 @@ Registered users can interact with articles through comments and ratings.
 
 Administrators can view and manage published news articles.
 
-![Admin News Management](screenshots/admin-news-management.png)
+![Admin News Management](screenshots/admin-news-management.jpeg)
 
 ---
 
@@ -256,7 +256,7 @@ Administrators can view and manage published news articles.
 
 The form used by administrators to create a new article.
 
-![Create News](screenshots/create-news.png)
+![Create News](screenshots/create-news.jpeg)
 
 ---
 
@@ -264,7 +264,7 @@ The form used by administrators to create a new article.
 
 The interface for modifying existing news articles.
 
-![Edit News](screenshots/edit-news.png)
+![Edit News](screenshots/edit-news.jpeg)
 
 ---
 
@@ -272,7 +272,7 @@ The interface for modifying existing news articles.
 
 Administrators can manage news categories.
 
-![Category Management](screenshots/category-management.png)
+![Category Management](screenshots/category-management.jpeg)
 
 ---
 
@@ -280,7 +280,7 @@ Administrators can manage news categories.
 
 The form for creating a new news category.
 
-![Add Category](screenshots/add-category.png)
+![Add Category](screenshots/add-category.jpeg)
 
 ---
 
@@ -288,7 +288,7 @@ The form for creating a new news category.
 
 The admin interface for viewing and managing registered users.
 
-![User Management](screenshots/user-management.png)
+![User Management](screenshots/user-management.jpeg)
 
 ---
 
@@ -296,7 +296,7 @@ The admin interface for viewing and managing registered users.
 
 Administrative forms for creating and modifying user accounts.
 
-![User Form](screenshots/user-form.png)
+![User Form](screenshots/user-form.jpeg)
 
 ---
 
@@ -304,7 +304,7 @@ Administrative forms for creating and modifying user accounts.
 
 The activity log provides an overview of actions performed within the application.
 
-![Activity Logs](screenshots/activity-logs.png)
+![Activity Logs](screenshots/activity-logs.jpeg)
 
 ---
 
